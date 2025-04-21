@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Portal | Exam Management System</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: #f5faff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background-color: #1a237e;
+      color: white;
+      padding: 20px 40px;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #303f9f;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      padding: 15px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      padding: 8px 15px;
+      border-radius: 20px;
+    }
+
+    nav a:hover {
+      background-color: #fff;
+      color: #303f9f;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .admin-welcome {
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .admin-welcome h1 {
+      color: #1a237e;
+      margin-bottom: 10px;
+    }
+
+    .admin-welcome p {
+      font-size: 1.1em;
+      color: #555;
+    }
+
+    .dashboard {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      padding: 40px;
+    }
+
+    .card {
+      background-color: white;
+      padding: 30px;
+      width: 280px;
+      border-radius: 20px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      transition: 0.3s ease-in-out;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .card h3 {
+      color: #303f9f;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      font-size: 14px;
+      color: #666;
+    }
+
+    footer {
+      background-color: #1a237e;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Admin Portal</h1>
+    <p>Manage Exams | Students | Reports</p>
+  </header>
+
+  <nav>
+    <a href="admindashboard.html">Dashboard</a>
+    <a href="addexam.html">Add Exam</a>
+    <a href="managestudent.html">Manage Students</a>
+    <a href="analytics.html">Analytics</a>
+    <a href="logout.html">Logout</a>
+  </nav>
+
+  <section class="admin-welcome">
+    <h1>Hello, Admin!</h1>
+    <p>Control all operations from your dashboard</p>
+  </section>
+
+  <section class="dashboard">
+    <div class="card">
+      <h3>Create Exam</h3>
+      <p>Set up a new exam with time, questions, and more.</p>
+    </div>
+    <div class="card">
+      <h3>Manage Students</h3>
+      <p>View, add, or remove registered students.</p>
+    </div>
+    <div class="card">
+      <h3>Review Results</h3>
+      <p>Analyze results and export performance reports.</p>
+    </div>
+    <div class="card">
+      <h3>Live Analytics</h3>
+      <p>Track ongoing exams and live student activity.</p>
+    </div>
+    <div class="card">
+      <h3>Send Notifications</h3>
+      <p>Inform students via email or alerts about exams.</p>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Exam Management System 
+  </footer>
+
+</body>
+</html>

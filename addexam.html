@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Add Exam | Admin Panel</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: #f4f7fe;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      background-color: #1a237e;
+      color: white;
+      text-align: center;
+      padding: 30px 0;
+    }
+
+    .form-container {
+      max-width: 600px;
+      margin: 40px auto;
+      background: white;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+
+    .form-container h2 {
+      margin-bottom: 25px;
+      color: #1a237e;
+      text-align: center;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      outline: none;
+      transition: border-color 0.3s ease;
+    }
+
+    input:focus, select:focus {
+      border-color: #3949ab;
+    }
+
+    .btn-submit {
+      width: 100%;
+      padding: 14px;
+      background-color: #1a237e;
+      color: white;
+      border: none;
+      border-radius: 30px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    .btn-submit:hover {
+      background-color: #3949ab;
+    }
+
+    footer {
+      background-color: #1a237e;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Admin Panel</h1>
+    <p>Add New Exam</p>
+  </header>
+
+  <div class="form-container">
+    <h2>Add Exam Details</h2>
+    <form action="#" method="post">
+      <label for="examTitle">Exam Title</label>
+      <input type="text" id="examTitle" name="examTitle" placeholder="e.g., Mid-Term Test" required>
+
+      <label for="subject">Subject</label>
+      <input type="text" id="subject" name="subject" placeholder="e.g., Mathematics" required>
+
+      <label for="date">Date</label>
+      <input type="date" id="date" name="date" required>
+
+      <label for="time">Time</label>
+      <input type="time" id="time" name="time" required>
+
+      <label for="duration">Duration (in minutes)</label>
+      <input type="number" id="duration" name="duration" placeholder="e.g., 60" required>
+
+      <button type="submit" class="btn-submit">Add Exam</button>
+    </form>
+  </div>
+
+  <footer>
+    &copy; 2025 Exam Management System | Designed by Vanshita Shivankar
+  </footer>
+
+</body>
+</html>

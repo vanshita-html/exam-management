@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Dashboard | Exam Management System</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: #f4f7fe;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background-color: #1a237e;
+      color: white;
+      padding: 20px 40px;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #3949ab;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 15px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 8px 20px;
+      border-radius: 20px;
+      transition: 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: white;
+      color: #3949ab;
+    }
+
+    .dashboard-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      padding: 50px 20px;
+    }
+
+    .card {
+      background-color: white;
+      padding: 30px;
+      width: 250px;
+      border-radius: 20px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+    }
+
+    .card h3 {
+      color: #1a237e;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: #555;
+      font-size: 14px;
+    }
+
+    footer {
+      background-color: #1a237e;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Student Dashboard</h1>
+    <p>Welcome, Vanshita Shivankar</p>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="myexam.html">My Exams</a>
+    <a href="result.html">Results</a>
+    <a href="notification.html">Notifications</a>
+    <a href="logout.html">Logout</a>
+  </nav>
+
+  <section class="dashboard-container">
+    <div class="card">
+      <h3>Upcoming Exams</h3>
+      <p>View all scheduled exams and details.</p>
+    </div>
+
+    <div class="card">
+      <h3>Attempt Exam</h3>
+      <p>Start your live exam and answer questions.</p>
+    </div>
+
+    <div class="card">
+      <h3>My Results</h3>
+      <p>Check your marks, grades, and feedback.</p>
+    </div>
+
+    <div class="card">
+      <h3>Profile</h3>
+      <p>Update your info like name, email, password.</p>
+    </div>
+
+    <div class="card">
+      <h3>Notifications</h3>
+      <p>Get exam alerts, reminders, and announcements.</p>
+    </div>
+
+    <div class="card">
+      <h3>Help & Support</h3>
+      <p>Contact admin for issues or queries anytime.</p>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Exam Management System | Designed by Vanshita Shivankar
+  </footer>
+
+</body>
+</html>

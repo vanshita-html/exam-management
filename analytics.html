@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Dashboard | Exam Management System</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: #f4f7fe;
+      display: flex;
+      min-height: 100vh;
+    }
+
+    .sidebar {
+      background-color: #1a237e;
+      color: white;
+      width: 250px;
+      height: 100vh;
+      position: fixed;
+      padding-top: 40px;
+    }
+
+    .sidebar a {
+      color: white;
+      padding: 16px 20px;
+      text-decoration: none;
+      display: block;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+
+    .sidebar a:hover {
+      background-color: #3949ab;
+    }
+
+    .sidebar .logo {
+      font-size: 24px;
+      font-weight: bold;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .content {
+      padding: 20px;
+      width: 100%;
+    }
+
+    header {
+      background-color: #3949ab;
+      color: white;
+      padding: 15px 20px;
+      text-align: center;
+      border-radius: 8px;
+    }
+
+    .stats-container {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .stat-box {
+      background-color: white;
+      padding: 20px;
+      flex: 1;
+      min-width: 200px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .stat-box h3 {
+      font-size: 28px;
+      color: #1a237e;
+    }
+
+    .stat-box p {
+      font-size: 16px;
+      color: #888;
+    }
+
+    .charts-container {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin-top: 40px;
+      gap: 20px;
+    }
+
+    .chart-card {
+      background-color: white;
+      flex: 1;
+      min-width: 300px;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    footer {
+      background-color: #1a237e;
+      color: white;
+      text-align: center;
+      padding: 15px;
+    }
+
+    .btn {
+      background-color: #3949ab;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #1a237e;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <div class="logo">Admin Panel</div>
+    <a href="admindashboard.html">Dashboard</a>
+    <a href="managestudent.html">Manage Students</a>
+    <a href="addexam.html">Manage Exams</a>
+    <a href="result.html">Results</a>
+    <a href="notification.html">Notifications</a>
+    <a href="setting.html">Settings</a>
+    <a href="logout.html">Logout</a>
+  </div>
+
+  <!-- Wrapper: Content + Footer -->
+  <div style="flex: 1; display: flex; flex-direction: column; margin-left: 250px; min-height: 100vh;">
+
+    <!-- Main Content -->
+    <div class="content" style="flex: 1;">
+      <header>
+        <h1>Admin Dashboard</h1>
+      </header>
+
+      <div class="stats-container">
+        <div class="stat-box">
+          <h3>120</h3>
+          <p>Students</p>
+        </div>
+        <div class="stat-box">
+          <h3>10</h3>
+          <p>Exams</p>
+        </div>
+        <div class="stat-box">
+          <h3>35</h3>
+          <p>Completed Exams</p>
+        </div>
+        <div class="stat-box">
+          <h3>5</h3>
+          <p>Pending Results</p>
+        </div>
+      </div>
+
+      <div class="charts-container">
+        <!-- Pie Chart -->
+        <div class="chart-card">
+          <h4>Exam Completion</h4>
+          <canvas id="examCompletionChart" style="height: 150px;"></canvas>
+        </div>
+
+        <!-- Bar Chart -->
+        <div class="chart-card">
+          <h4>Student Enrollment by Course</h4>
+          <canvas id="courseEnrollmentChart" style="height: 220px;"></canvas>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      &copy; 2025 Exam Management System | Designed by Vanshita Shivankar
+    </footer>
+  </div>
+
+  <!-- Chart.js Scripts -->
+  <script>
+    // Exam Completion Pie Chart
+    const examCompletionChart = new Chart(document.getElementById('examCompletionChart'), {
+      type: 'pie',
+      data: {
+        labels: ['Completed Exams', 'Pending Exams'],
+        datasets: [{
+          label: 'Exam Completion Status',
+          data: [35, 5],
+          backgroundColor: ['#4caf50', '#d32f2f'],
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: {
+            position: 'top',
+          },
+        },
+      }
+    });
+
+    // Course Enrollment Bar Chart
+    const courseEnrollmentChart = new Chart(document.getElementById('courseEnrollmentChart'), {
+      type: 'bar',
+      data: {
+        labels: ['Computer Science', 'Mechanical', 'Electronics', 'Civil', 'Electrical'],
+        datasets: [{
+          label: 'Students Enrolled',
+          data: [40, 30, 25, 15, 10],
+          backgroundColor: '#3949ab',
+          borderColor: '#1a237e',
+          borderWidth: 1,
+        }]
+      },
+      options: {
+        responsive: true,
+        scales: {
+          x: {
+            beginAtZero: true
+          },
+        },
+      }
+    });
+  </script>
+
+</body>
+</html>
