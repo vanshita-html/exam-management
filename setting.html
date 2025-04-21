@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Settings | Exam Management System</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: #f4f7fe;
+      display: flex;
+      min-height: 100vh;
+    }
+
+    .sidebar {
+      background-color: #1a237e;
+      color: white;
+      width: 250px;
+      height: 100%;
+      position: fixed;
+      padding-top: 40px;
+    }
+
+    .sidebar a {
+      color: white;
+      padding: 16px 20px;
+      text-decoration: none;
+      display: block;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+
+    .sidebar a:hover {
+      background-color: #3949ab;
+    }
+
+    .sidebar .logo {
+      font-size: 24px;
+      font-weight: bold;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .content {
+      margin-left: 250px;
+      padding: 20px;
+      width: 100%;
+    }
+
+    header {
+      background-color: #3949ab;
+      color: white;
+      padding: 15px 20px;
+      text-align: center;
+    }
+
+    .settings-container {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-top: 40px;
+    }
+
+    .settings-card {
+      background-color: white;
+      padding: 20px;
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+    }
+
+    .settings-card h4 {
+      margin-bottom: 15px;
+    }
+
+    .settings-card label {
+      font-size: 16px;
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    .settings-card input[type="text"],
+    .settings-card input[type="email"],
+    .settings-card input[type="password"],
+    .settings-card select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+
+    .settings-card button {
+      background-color: #3949ab;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .settings-card button:hover {
+      background-color: #1a237e;
+    }
+
+    footer {
+      background-color: #1a237e;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      position: absolute;
+      width: 100%;
+      bottom: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <div class="logo">Admin Panel</div>
+    <a href="#">Dashboard</a>
+    <a href="#">Manage Students</a>
+    <a href="#">Manage Exams</a>
+    <a href="#">Results</a>
+    <a href="#">Notifications</a>
+    <a href="#">Settings</a>
+    <a href="#">Logout</a>
+  </div>
+
+  <!-- Main Content -->
+  <div class="content">
+    <header>
+      <h1>Settings</h1>
+    </header>
+
+    <div class="settings-container">
+      <!-- Change Admin Profile -->
+      <div class="settings-card">
+        <h4>Change Admin Profile</h4>
+        <label for="admin-name">Name:</label>
+        <input type="text" id="admin-name" name="admin-name" placeholder="Enter your name">
+        
+        <label for="admin-email">Email:</label>
+        <input type="email" id="admin-email" name="admin-email" placeholder="Enter your email">
+        
+        <label for="admin-password">New Password:</label>
+        <input type="password" id="admin-password" name="admin-password" placeholder="Enter a new password">
+        
+        <button type="submit">Save Changes</button>
+      </div>
+
+      <!-- System Preferences -->
+      <div class="settings-card">
+        <h4>System Preferences</h4>
+        <label for="exam-duration">Default Exam Duration (in minutes):</label>
+        <input type="text" id="exam-duration" name="exam-duration" placeholder="Set default duration">
+
+        <label for="exam-notification">Enable Exam Notifications:</label>
+        <select id="exam-notification" name="exam-notification">
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+        </select>
+
+        <label for="result-publishing">Enable Result Publishing:</label>
+        <select id="result-publishing" name="result-publishing">
+          <option value="immediate">Immediate</option>
+          <option value="delayed">Delayed</option>
+        </select>
+
+        <button type="submit">Save Preferences</button>
+      </div>
+
+      <!-- Email Settings -->
+      <div class="settings-card">
+        <h4>Email Settings</h4>
+        <label for="smtp-server">SMTP Server:</label>
+        <input type="text" id="smtp-server" name="smtp-server" placeholder="Enter SMTP server address">
+        
+        <label for="smtp-port">SMTP Port:</label>
+        <input type="text" id="smtp-port" name="smtp-port" placeholder="Enter SMTP port">
+        
+        <button type="submit">Save Email Settings</button>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Exam Management System | Designed by Vanshita Shivankar
+  </footer>
+
+</body>
+</html>

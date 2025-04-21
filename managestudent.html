@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Manage Students | Admin Panel</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: #f4f7fe;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      background-color: #1a237e;
+      color: white;
+      padding: 20px 40px;
+      text-align: center;
+    }
+
+    .student-container {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: white;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    th, td {
+      padding: 15px 20px;
+      text-align: center;
+      border-bottom: 1px solid #eee;
+    }
+
+    th {
+      background-color: #3949ab;
+      color: white;
+    }
+
+    tr:hover {
+      background-color: #f1f5ff;
+    }
+
+    .btn-add, .btn-edit, .btn-delete {
+      padding: 8px 16px;
+      border: none;
+      border-radius: 20px;
+      font-size: 14px;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    .btn-add {
+      background-color: #1a237e;
+      color: white;
+    }
+
+    .btn-add:hover {
+      background-color: #3949ab;
+    }
+
+    .btn-edit {
+      background-color: #388e3c;
+      color: white;
+    }
+
+    .btn-edit:hover {
+      background-color: #4caf50;
+    }
+
+    .btn-delete {
+      background-color: #d32f2f;
+      color: white;
+    }
+
+    .btn-delete:hover {
+      background-color: #f44336;
+    }
+
+    footer {
+      background-color: #1a237e;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Admin Panel</h1>
+    <p>Manage Students</p>
+  </header>
+
+  <section class="student-container">
+    <button class="btn-add">Add New Student</button>
+    <table>
+      <thead>
+        <tr>
+          <th>Student ID</th>
+          <th>Name</th>
+          <th>Course</th>
+          <th>Email</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>101</td>
+          <td>John Doe</td>
+          <td>B.Tech - Computer Science</td>
+          <td>johndoe@example.com</td>
+          <td>
+            <button class="btn-edit">Edit</button>
+            <button class="btn-delete">Delete</button>
+          </td>
+        </tr>
+        <tr>
+          <td>102</td>
+          <td>Alice Smith</td>
+          <td>B.Tech - Electronics</td>
+          <td>alicesmith@example.com</td>
+          <td>
+            <button class="btn-edit">Edit</button>
+            <button class="btn-delete">Delete</button>
+          </td>
+        </tr>
+        <tr>
+          <td>103</td>
+          <td>Bob Johnson</td>
+          <td>B.Tech - Mechanical</td>
+          <td>bobjohnson@example.com</td>
+          <td>
+            <button class="btn-edit">Edit</button>
+            <button class="btn-delete">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <footer>
+    &copy; 2025 Exam Management System | Designed by Vanshita Shivankar
+  </footer>
+
+</body>
+</html>

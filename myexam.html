@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Exams | Exam Management System</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: #f4f7fe;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background-color: #1a237e;
+      color: white;
+      padding: 20px 40px;
+      text-align: center;
+    }
+
+    .exam-container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: white;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    th, td {
+      padding: 18px 20px;
+      text-align: center;
+      border-bottom: 1px solid #eee;
+    }
+
+    th {
+      background-color: #3949ab;
+      color: white;
+    }
+
+    tr:hover {
+      background-color: #f1f5ff;
+    }
+
+    .start-btn {
+      padding: 8px 18px;
+      background-color: #1a237e;
+      color: white;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: 0.3s ease;
+      font-size: 14px;
+    }
+
+    .start-btn:hover {
+      background-color: #3949ab;
+    }
+
+    footer {
+      background-color: #1a237e;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>My Exams</h1>
+    <p>All your upcoming and active exams are listed here</p>
+  </header>
+
+  <section class="exam-container">
+    <table>
+      <thead>
+        <tr>
+          <th>Exam Name</th>
+          <th>Subject</th>
+          <th>Date</th>
+          <th>Time</th>
+          <th>Status</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Mid Term 1</td>
+          <td>Web Development</td>
+          <td>20-Apr-2025</td>
+          <td>10:00 AM</td>
+          <td>Scheduled</td>
+          <td><button class="start-btn">Start Exam</button></td>
+        </tr>
+        <tr>
+          <td>Java Programming Quiz</td>
+          <td>Java</td>
+          <td>22-Apr-2025</td>
+          <td>11:00 AM</td>
+          <td>Scheduled</td>
+          <td><button class="start-btn">Start Exam</button></td>
+        </tr>
+        <tr>
+          <td>Database Management</td>
+          <td>DBMS</td>
+          <td>25-Apr-2025</td>
+          <td>02:00 PM</td>
+          <td>Scheduled</td>
+          <td><button class="start-btn">Start Exam</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <footer>
+    &copy; 2025 Exam Management System | Designed by Vanshita Shivankar
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Logged Out | Exam Management System</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to right, #e3f2fd, #ffffff);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .logout-container {
+      background: white;
+      padding: 50px;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .logout-container h2 {
+      color: #1a237e;
+      margin-bottom: 15px;
+    }
+
+    .logout-container p {
+      font-size: 16px;
+      color: #444;
+      margin-bottom: 30px;
+    }
+
+    .logout-container a {
+      text-decoration: none;
+      color: white;
+      background-color: #1a237e;
+      padding: 12px 30px;
+      border-radius: 30px;
+      font-size: 16px;
+      transition: 0.3s ease;
+    }
+
+    .logout-container a:hover {
+      background-color: #3949ab;
+    }
+
+    .emoji {
+      font-size: 60px;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="logout-container">
+    <div class="emoji">👋</div>
+    <h2>You have been logged out</h2>
+    <p>Thank you for using Exam Management System.<br>We hope to see you again soon!</p>
+    <a href="login.html">Back to Login</a>
+  </div>
+
+</body>
+</html>

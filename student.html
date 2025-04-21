@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Portal | Exam Management System</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      padding: 0;
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to right, #e3f2fd, #ffffff);
+      min-height: 100vh;
+    }
+
+    header {
+      background-color: #0d47a1;
+      color: white;
+      padding: 20px 40px;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #1565c0;
+      padding: 10px 0;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      padding: 8px 15px;
+      border-radius: 20px;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      background-color: #ffffff;
+      color: #1565c0;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .welcome {
+      text-align: center;
+      padding: 50px 20px;
+    }
+
+    .welcome h1 {
+      color: #0d47a1;
+      margin-bottom: 10px;
+    }
+
+    .welcome p {
+      color: #555;
+      font-size: 1.1em;
+    }
+
+    .dashboard {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      padding: 40px;
+    }
+
+    .card {
+      background-color: #ffffff;
+      border-radius: 20px;
+      padding: 30px;
+      width: 280px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .card h3 {
+      color: #1565c0;
+      margin-bottom: 15px;
+    }
+
+    .card p {
+      color: #666;
+      font-size: 14px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #0d47a1;
+      color: white;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Student Portal</h1>
+    <p>Welcome to your exam dashboard</p>
+  </header>
+
+  <nav>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="myexam.html">Upcoming Exams</a>
+    <a href="result.html">My Results</a>
+    <a href="logout.html">Logout</a>
+  </nav>
+
+  <section class="welcome">
+    <h1>Hello, Student!</h1>
+    <p>Here you can check your exams, view results, and keep track of your progress.</p>
+  </section>
+
+  <section class="dashboard">
+    <div class="card">
+      <h3>Upcoming Exams</h3>
+      <p>View schedules and exam details.</p>
+    </div>
+    <div class="card">
+      <h3>Start Exam</h3>
+      <p>Join your active exam and begin solving questions.</p>
+    </div>
+    <div class="card">
+      <h3>View Results</h3>
+      <p>Check past scores and performance summaries.</p>
+    </div>
+    <div class="card">
+      <h3>Update Profile</h3>
+      <p>Change your details, password, and preferences.</p>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Exam Management System
+  </footer>
+
+</body>
+</html>
